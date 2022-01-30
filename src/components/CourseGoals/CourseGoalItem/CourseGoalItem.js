@@ -1,20 +1,18 @@
-import React from 'react';
+import "./CourseGoalItem.css";
 
-import './CourseGoalItem.css';
+function CourseGoalItem(props) {
+  // const [deleteText, setDeleteText] = useState("");
 
-const CourseGoalItem = props => {
-  // const [deleteText, setDeleteText] = useState('');
-
-  const deleteHandler = () => {
-    // setDeleteText('(Deleted!)');
-    props.onDelete(props.id);
-  };
+  function deleteGoalHandler() {
+    // setDeleteText("(Deleted!)");
+    props.onDeleteGoal(props.id);
+  }
 
   return (
-    <li className="goal-item" onClick={deleteHandler}>
+    <li className="goal-item" onClick={deleteGoalHandler}>
       {props.children}
     </li>
   );
-};
+}
 
 export default CourseGoalItem;
