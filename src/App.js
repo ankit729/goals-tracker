@@ -1,4 +1,4 @@
-import "./App.css";
+import styles from "./App.module.css";
 
 import { useState } from "react";
 
@@ -36,10 +36,10 @@ function App() {
 
   return (
     <div>
-      <section id="goal-form">
+      <section id={styles["goal-form"]}>
         <CourseInput onAddGoal={addGoalHandler} />
       </section>
-      <section id="goals">
+      <section id={styles["goals"]}>
         {content}
         {/* {courseGoals.length > 0 && (
           <CourseGoalList

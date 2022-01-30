@@ -1,10 +1,10 @@
-import "./CourseGoalList.css";
+import styles from "./CourseGoalList.module.css";
 
 import CourseGoalItem from "../CourseGoalItem/CourseGoalItem";
 
 function CourseGoalList(props) {
   return (
-    <ul className="goal-list">
+    <ul className={styles["goal-list"]}>
       {props.items.map((goal) => (
         <CourseGoalItem
           key={goal.id}

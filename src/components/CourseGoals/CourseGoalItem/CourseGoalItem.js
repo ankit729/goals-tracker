@@ -1,4 +1,4 @@
-import "./CourseGoalItem.css";
+import styles from "./CourseGoalItem.module.css";
 
 function CourseGoalItem(props) {
   // const [deleteText, setDeleteText] = useState("");
@@ -9,7 +9,7 @@ function CourseGoalItem(props) {
   }
 
   return (
-    <li className="goal-item" onClick={deleteGoalHandler}>
+    <li className={styles["goal-item"]} onClick={deleteGoalHandler}>
       {props.children}
     </li>
   );

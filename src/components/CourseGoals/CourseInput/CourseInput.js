@@ -1,4 +1,4 @@
-import "./CourseInput.css";
+import styles from "./CourseInput.module.css";
 import Button from "../../UI/Button/Button";
 
 import { useState } from "react";
@@ -19,11 +19,14 @@ function CourseInput(props) {
     }
     props.onAddGoal(enteredValue);
     setEnteredValue("");
+    setIsValid(false);
   }
 
   return (
     <form onSubmit={formSubmitHandler}>
-      <div className={`form-control ${!isValid && "invalid"}`}>
+      <div
+        className={`${styles["form-control"]} ${!isValid && styles.invalid}`}
+      >
         <label>Course Goal</label>
         <input type="text" value={enteredValue} onChange={inputChangeHandler} />
       </div>
